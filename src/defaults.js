@@ -103,5 +103,11 @@ export default {
      * Default lory direction.
      * @rtl {boolean}
      */
-    rtl: false
+    rtl: false,
+
+    /**
+     * If false, lory ignores reset() on window resize.
+     * @resetOnResize {boolean}
+     */
+    resetOnResize: true
 };

@@ -715,7 +715,9 @@ function lory(slider, opts) {
     }
 
     function onResize(event) {
-        reset();
+        if (options.resetOnResize) {
+            reset();
+        }
 
         dispatchSliderEvent('on', 'resize', {
             event: event
@@ -1033,7 +1035,13 @@ exports.default = {
    * Default lory direction.
    * @rtl {boolean}
    */
-  rtl: false
+  rtl: false,
+
+  /**
+   * If false, lory ignores reset() on window resize.
+   * @resetOnResize {boolean}
+   */
+  resetOnResize: true
 };
 
 /***/ }),

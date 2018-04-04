@@ -582,7 +582,9 @@ export function lory (slider, opts) {
     }
 
     function onResize (event) {
-        reset();
+        if (options.resetOnResize) {
+            reset();
+        }
 
         dispatchSliderEvent('on', 'resize', {
             event

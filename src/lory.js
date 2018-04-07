@@ -497,7 +497,7 @@ export function lory (slider, opts) {
         }
 
         if (!isScrolling && touchOffset) {
-            event.preventDefault();
+            // event.preventDefault();
             translate(position.x + delta.x, 0, null);
         }
 
@@ -584,9 +584,8 @@ export function lory (slider, opts) {
             windowWidth = options.window.innerWidth;
 
             reset();
-
         }
-        
+
         dispatchSliderEvent('on', 'resize', {
             event
         });

@@ -584,11 +584,12 @@ export function lory (slider, opts) {
             windowWidth = options.window.innerWidth;
 
             reset();
+            
+            dispatchSliderEvent('on', 'resize', {
+                event
+            });
         }
 
-        dispatchSliderEvent('on', 'resize', {
-            event
-        });
     }
 
     // trigger initial setup

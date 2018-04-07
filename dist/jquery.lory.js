@@ -713,9 +713,13 @@ function lory(slider, opts) {
     }
 
     function onResize(event) {
+<<<<<<< HEAD
         if (options.window.innerWidth !== windowWidth) {
             windowWidth = options.window.innerWidth;
 
+=======
+        if (options.resetOnResize) {
+>>>>>>> 5f97b29aaaaae4a5148af4a295e92ffb5dc67177
             reset();
         }
 
@@ -1035,7 +1039,13 @@ exports.default = {
    * Default lory direction.
    * @rtl {boolean}
    */
-  rtl: false
+  rtl: false,
+
+  /**
+   * If false, lory ignores reset() on window resize.
+   * @resetOnResize {boolean}
+   */
+  resetOnResize: true
 };
 
 /***/ }),
